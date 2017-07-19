@@ -19,8 +19,8 @@ public class CatalogController {
 	@Autowired
     private CatalogModel catalogModel;
 	
-	@RequestMapping(value = "item", method = RequestMethod.GET)
-    public List<Item> index() {
+	@RequestMapping("/items")
+    public List<Item> items() {
 		List<Item> items = catalogModel.index();
 		
         return items;

@@ -1,10 +1,10 @@
 (function(){
 	var app = angular.module('shopping', []);
 
-	var shoppingController = function($scope, $http){
-		$http.get('/api/v1/items').then(function(response) {
+	var shoppingController = function($http){
+		$http.get('/catalog').then(function(response) {
 	    	console.log(response.data)
-	      	$scope.items = response.data;
+	      	self.catalog = response.data;
 	    })
 	}  
 
