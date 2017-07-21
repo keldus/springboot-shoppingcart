@@ -3,7 +3,6 @@ package com.moraiss.shoppingcart.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 import com.moraiss.shoppingcart.models.Item;
 import com.moraiss.shoppingcart.repository.ItemsRepository;
-
-
 
 @RestController
 @RequestMapping("/api/v1")
@@ -30,7 +27,7 @@ public class ItemsController {
     }
 	
 	@RequestMapping(value = "/items/{id}", method = RequestMethod.GET)
-    public String get(@PathVariable int id,  Model model) {
+    public String get(@PathVariable int id) {
 		Item item = itemsRepo.get(id);
 		Gson g = new Gson();
 

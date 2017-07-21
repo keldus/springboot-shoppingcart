@@ -98,3 +98,5 @@ INSERT INTO `Items` (name, description, price) VALUES('item 97' , 'description o
 INSERT INTO `Items` (name, description, price) VALUES('item 98' , 'description of the item 98', 92.23);
 INSERT INTO `Items` (name, description, price) VALUES('item 99' , 'description of the item 99', 15.01);
 INSERT INTO `Items` (name, description, price) VALUES('item 100' , 'description of the item 100', 83.10);
+INSERT INTO `ShoppingCartItems` (id, itemId, quantity) VALUES(1,1,2);
+INSERT INTO `ShoppingCartItems` (id, itemId, quantity) VALUES(2,12,10);

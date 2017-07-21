@@ -1,0 +1,67 @@
+<div ng-controller="cartCtrl" style="background: #F7F7F7">
+	<div class="top_nav">
+      <div class="nav_menu">
+        <nav>
+          <ul class="nav navbar-nav navbar-left">
+            <li role="presentation">
+              <a href="#">Catalog
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          	<li class="">
+              <a href="javascript:;">
+                John Doe
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#!cart">Shopping Cart
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+	<div>
+	  <div class="page-title">
+	    <div class="title_left">
+	      <h3>Shopping Cart</h3>
+	    </div>
+	  </div>
+
+	  <div class="clearfix"></div>
+
+      <div class="x_panel">
+        <div class="x_content">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="cartItem in cart" id="cartItem-{{cartItem.id}}">
+        				<td>{{cartItem.item.name}}</td>
+        				<td>{{cartItem.item.description}}</td>
+        				<td>{{cartItem.item.price | number : 2}}$</td>
+        				<td>
+                  <input type="number" value="{{cartItem.quantity}}" ng-change="change(cartItem)" ng-model="cartItem.quantity" ng-model-options="{updateOn: 'blur'}" data-cart-item-id="{{cartItem.id}}">
+        				</td>
+                <td>
+                  <button type="button" class="btn btn-error" aria-label="Remove" ng-click="removeFromCart(cartItem)">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                  </button>
+                </td>
+        			</tr>
+            </tbody>
+          </table>
+          <div style="float:left">TOTAL: {{total | number : 2}}</div>
+        </div>
+      </div>
+    </div>
+  </div>

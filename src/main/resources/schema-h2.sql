@@ -1,3 +1,2 @@
 CREATE TABLE Items(ID int PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(100), DESCRIPTION VARCHAR(255), PRICE decimal(5,2));
-CREATE TABLE ShoppingCart(ID int PRIMARY KEY AUTO_INCREMENT, userId int);
-CREATE TABLE ShoppingCartItems(ID int PRIMARY KEY AUTO_INCREMENT, shoppingCartId int, itemId int, quantity int);
+CREATE TABLE ShoppingCartItems(ID int PRIMARY KEY AUTO_INCREMENT, itemId int, quantity int);

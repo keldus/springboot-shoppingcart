@@ -2,6 +2,12 @@
 	<div class="top_nav">
       <div class="nav_menu">
         <nav>
+          <ul class="nav navbar-nav navbar-left">
+            <li role="presentation">
+              <a href="#">Catalog
+              </a>
+            </li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
           	<li class="">
               <a href="javascript:;">
@@ -9,7 +15,7 @@
               </a>
             </li>
             <li role="presentation">
-              <a href="javascript:;">Shopping Cart
+              <a href="#!cart">Shopping Cart
                 <i class="fa fa-shopping-cart"></i>
               </a>
             </li>
@@ -41,13 +47,13 @@
               <tr ng-repeat="item in items">
         				<td>{{item.name}}</td>
         				<td>{{item.description}}</td>
-        				<td>{{item.price}}$</td>
+        				<td>{{item.price | number : 2}}$</td>
         				<td>
                   <a type="button" href="#!items/{{item.id}}" class="btn btn-default" aria-label="More Details">
                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                   </a>
-        					<a type="button" href="#!items/{{item.id}}" class="btn btn-default" aria-label="Add To Cart">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        					<a type="button" class="btn btn-default" aria-label="Add To Cart">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="addToCart(item)"></span>
                   </a>
         				</td>
         			</tr>

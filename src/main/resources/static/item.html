@@ -1,9 +1,45 @@
 <div ng-controller="itemCtrl" style="background: #F7F7F7">
-	<div class="x_panel">
+	<div class="top_nav">
+      <div class="nav_menu">
+        <nav>
+        	<ul class="nav navbar-nav navbar-left">
+            <li role="presentation">
+              <a href="#">Catalog
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          	<li class="">
+              <a href="javascript:;">
+                John Doe
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#!cart">Shopping Cart
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+	<div>
+	  <div class="page-title">
+	    <div class="title_left">
+	      <h3>Catalog <small>All the items that you need!</small></h3>
+	    </div>
+	  </div>
+
+	  <div class="clearfix"></div>
+
+      <div class="x_panel">
         <div class="x_content">
     		Name: {{item.name}}
-    		Description: {{item.name}}
-    		Price: {{item.name}}
+    		Description: {{item.description}}
+    		Price: {{item.price | number : 2}}
+    		<a type="button" class="btn btn-default" aria-label="Add To Cart">
+	            <span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="addToCart(item)"></span>
+	        </a>
         </div>
     </div>
-</div>
+  </div>

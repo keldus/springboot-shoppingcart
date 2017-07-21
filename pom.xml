@@ -55,8 +55,7 @@
 		<dependency>
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>
-		    <version>2.8.1</version>
-		</dependency>
+		    </dependency>
 	</dependencies>
 
 	<build>		
@@ -110,6 +109,8 @@
 	        		<wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
 	        		<cssDestinationFolder>${project.build.directory}/generated-resources/static/css</cssDestinationFolder>
 	        		<jsDestinationFolder>${project.build.directory}/generated-resources/static/js</jsDestinationFolder>
+	        		<vendorsDestinationFolder>${project.build.directory}/generated-resources/static/vendors</vendorsDestinationFolder>
+	        		<buildDestinationFolder>${project.build.directory}/generated-resources/static/build</buildDestinationFolder>
 	        		<wroFile>${project.build.directory}/wro/wro.xml</wroFile>
 	        		<extraConfigFile>${project.build.directory}/wro/wro.properties</extraConfigFile>
 	        		<contextFolder>${project.build.directory}/wro</contextFolder>
