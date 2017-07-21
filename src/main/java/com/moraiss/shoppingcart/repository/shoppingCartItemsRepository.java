@@ -30,7 +30,7 @@ public class ShoppingCartItemsRepository {
             						rs.getString("name"),
             						rs.getString("description"),
             						Float.parseFloat(rs.getString("price"))
-            						);
+            						); 
             	cartItem.setItem(item);
             	cartItem.setQuantity(Integer.parseInt(rs.getString("quantity")));
             	
